@@ -1,0 +1,20 @@
+﻿{
+  "bindings": [
+    {
+      "type": "eventHubTrigger",
+      "name": "events",
+      "direction": "in",
+      "eventHubName": "eventhub-inst-02",
+      "cardinality": "many",
+      "connection": "eventhubs-02_RootManageSharedAccessKey_EVENTHUB",
+      "consumerGroup": "$Default"
+    },
+    {
+      "name": "inputBlob",
+      "path": "blobstorage-02/emails.json",
+      "connection": "jam02storage02_STORAGE",
+      "direction": "in",
+      "type": "blob"
+    }
+  ]
+}
